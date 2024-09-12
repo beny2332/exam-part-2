@@ -22,6 +22,35 @@ const Mission3 = (arrToConvert) =>{
     return newArr
 }
 
+const Mission4 = (arr) => {
+    if (arr.length <= 1) return 0
+    let isAscending = true
+    let isDescending = true
+    for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i] < arr[i + 1]) {
+            isDescending = false
+        }
+        if (arr[i] > arr[i + 1]) {
+            isAscending = false
+        }
+        if(!isAscending && !isDescending) {
+            return 0
+        }
+    }
+    if (isAscending) return 1
+    
+    else if (isDescending) return 2
+    
+    else return 0
+}
+
+module.exports = {
+    Mission1,
+    Mission2,
+    Mission3,
+    Mission4
+}
+
 
 
 

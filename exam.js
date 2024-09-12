@@ -14,5 +14,15 @@ const Mission2 = (str) => {
     return result
 }
 
+const Mission3 = (arrToConvert) =>{
+    let newArr = []
+    for (let i = 0; i < arrToConvert.length; i++) {
+        newArr = newArr.concat(arrToConvert[i])
+    }
+    return newArr
+}
+
+
+
 
 
